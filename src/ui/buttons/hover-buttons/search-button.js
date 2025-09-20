@@ -117,6 +117,28 @@ function setHoverForSearchButton(searchButton) {
 
     /// Append panel
     searchButton.appendChild(searchPanel);
+
+    /// Add input field (draft)
+    // const textEdit = document.createElement('input');
+    // textEdit.type = 'text';
+    // textEdit.className = 'selecton-info-panel-text-edit';
+    // textEdit.value = selectedText;
+    // textEdit.style = `margin:2px !important; color:white; background-color: rgba(256,256,256,0.1); border: 1px solid gray; outline: none; width: 100%; font-size: 14px;color:white;display:block;border-radius:2px;margin-bottom:3px;text-align:center;`;
+    // textEdit.oninput = function () {
+    //     selectedText = textEdit.value;
+    //     infoString = `${symbols ?? selectedText.length} ${chrome.i18n.getMessage('symbolsCount').toLowerCase()}`;
+    //     infoPanel.innerText = infoString;
+    // }
+    // textEdit.onmousedown = function (e) {
+    //     e.stopPropagation();
+    //     e.stopImmediatePropagation();
+    //     // e.preventDefault();
+    // }
+    // textEdit.onkeydown = function (e) {
+    //     e.stopPropagation();
+    //     e.stopImmediatePropagation();
+    // }
+    // searchPanel.prepend(textEdit);
 }
 
 function createSearchOptionButton(icon, title, url, buttonPrototype) {
