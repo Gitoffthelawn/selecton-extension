@@ -404,6 +404,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Inverter a ordem dos botões"
     },
+    "rhombus": {
+        "message": "Losango"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Aumentar a escala (a partir de baixo)"
     },
@@ -490,6 +493,9 @@
     },
     "snapSelectionToWord": {
         "message": "Seleção de texto por palavra"
+    },
+    "square": {
+        "message": "Quadrado"
     },
     "strikeLabel": {
         "message": "Ataque"

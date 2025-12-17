@@ -480,6 +480,9 @@
   "reverseTooltipButtonsOrder": {
     "message": "反轉按鈕的次序"
   },
+  "rhombus": {
+    "message": "菱形"
+  },
   "scaleUpFromBottomTooltipEffect": {
     "message": "縱向擴展 (從底部)"
   },
@@ -566,6 +569,9 @@
   },
   "snapSelectionToWord": {
     "message": "按單字對齊文字選擇"
+  },
+  "square": {
+    "message": "正方形"
   },
   "strikeLabel": {
     "message": "擊打"

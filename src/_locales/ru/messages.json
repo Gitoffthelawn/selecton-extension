@@ -480,6 +480,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Обратный порядок кнопок"
     },
+    "rhombus": {
+        "message": "Ромб"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Увеличение (снизу)"
     },
@@ -566,6 +569,9 @@
     },
     "snapSelectionToWord": {
         "message": "Привязка выделения текста по слову"
+    },
+    "square": {
+        "message": "Квадрат"
     },
     "strikeLabel": {
         "message": "Зачеркн."

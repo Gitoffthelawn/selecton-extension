@@ -472,6 +472,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Inverser l'ordre des boutons"
     },
+    "rhombus": {
+        "message": "Losange"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Effet d'échelle (à partir du bas)"
     },
@@ -558,6 +561,9 @@
     },
     "snapSelectionToWord": {
         "message": "Sélection de texte par mot"
+    },
+    "square": {
+        "message": "Carré"
     },
     "strikeLabel": {
         "message": "Barré"
