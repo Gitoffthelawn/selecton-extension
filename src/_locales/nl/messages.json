@@ -465,6 +465,9 @@
   "reverseTooltipButtonsOrder": {
     "message": "Knopvolgorde omdraaien"
   },
+  "rhombus": {
+    "message": "Ruit"
+  },
   "scaleUpFromBottomTooltipEffect": {
     "message": "Uitvouwen (van onderen)"
   },
@@ -551,6 +554,9 @@
   },
   "snapSelectionToWord": {
     "message": "Gehele woorden selecteren"
+  },
+  "square": {
+    "message": "Vierkant"
   },
   "strikeLabel": {
     "message": "Doorhalen"

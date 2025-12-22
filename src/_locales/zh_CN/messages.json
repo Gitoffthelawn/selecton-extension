@@ -1,0 +1,683 @@
+{
+   "actionButtonsHeader": {
+      "message": "动作按钮"
+   },
+   "addActionButtonsForTextFields": {
+      "message": "为文字字段使用特殊面板"
+   },
+   "addButtonIcons": {
+      "message": "显示按钮图标"
+   },
+   "addButtonToCopyLinkToText": {
+      "message": "新增按钮以将链接复制到所选文字"
+   },
+   "addCalendarButton": {
+      "message": "为日期添加日历按钮"
+   },
+   "addClearButton": {
+      "message": "点击非空字段时显示「清除」按钮"
+   },
+   "addColorPreviewButton": {
+      "message": "新增颜色预览按钮 (用于#ffffff等CSS颜色)"
+   },
+   "addDragHandles": {
+      "message": "新增选择拖动句柄"
+   },
+   "addExtendSelectionButton": {
+      "message": "将按钮添加到扩展当前文本选择"
+   },
+   "addFontFormatButtons": {
+      "message": "新增字体格式按钮 (斜体、粗体)"
+   },
+   "addMarkerButton": {
+      "message": "新增「突出显示」按钮"
+   },
+   "addNewSearchOption": {
+      "message": "新增新的搜索选项"
+   },
+   "addOpenLinks": {
+      "message": "新增按钮以打开链接"
+   },
+   "addPasteButton": {
+      "message": "点击文字字段时显示「粘贴」按钮"
+   },
+   "addPasteOnlyEmptyField": {
+      "message": "…仅当字段为空时"
+   },
+   "addPhoneButton": {
+      "message": "新增电话号码按钮"
+   },
+   "addQuoteButton": {
+      "message": "新增按钮以引用选取的内容"
+   },
+   "addScaleUpEffect": {
+      "message": "在显示上使用放大效果"
+   },
+   "addTooltipShadow": {
+      "message": "新增工具提示阴影"
+   },
+   "allChangesSavedAutomatically": {
+      "message": "所有设定都会自动储存"
+   },
+   "animationDuration": {
+      "message": "动画时长 (毫秒)"
+   },
+   "appearanceHeader": {
+      "message": "外观"
+   },
+   "applyConfigsImmediately": {
+      "message": "立即应用配置"
+   },
+   "behaviorHeader": {
+      "message": "表现"
+   },
+   "boldLabel": {
+      "message": "大胆的"
+   },
+   "borderRadius": {
+      "message": "边界半径"
+   },
+   "buttonsStyle": {
+      "message": "按钮样式"
+   },
+   "buyMeCoffee": {
+      "message": "支持项目"
+   },
+   "callLabel": {
+      "message": "称呼"
+   },
+   "changeTextSelectionColor": {
+      "message": "自定义文字选择"
+   },
+   "chooseFileFirst": {
+      "message": "首先选择档案"
+   },
+   "circle": {
+      "message": "圆形"
+   },
+   "clearLabel": {
+      "message": "清除"
+   },
+   "collapseAsSecondPanel": {
+      "message": "始终将折叠的按钮显示为静态面板"
+   },
+   "collapseButtons": {
+      "message": "隐藏「更多」按钮下的超额按钮"
+   },
+   "contextualButtonsHeader": {
+      "message": "按钮"
+   },
+   "convertCurrencies": {
+      "message": "转换货币"
+   },
+   "convertMetrics": {
+      "message": "转换度量"
+   },
+   "convertResultClickAction": {
+      "message": "点击结果时的动作"
+   },
+   "convertTime": {
+      "message": "转换时间"
+   },
+   "convertToCurrency": {
+      "message": "要转换为的货币 (\u003Ca target='_blank' href='https://github.com/emvaized/selecton-extension#currency-converter'>info\u003C/a>)"
+   },
+   "convertToCurrencyHint": {
+      "message": "检视「程序代码」 \u003Ca target='_blank' href='https://www.iban.com/currency-codes'>这里\u003C/a> 以供参考"
+   },
+   "convertionHeader": {
+      "message": "转换"
+   },
+   "copyLabel": {
+      "message": "复制"
+   },
+   "correctTooltipPositionByMoreButtonWidth": {
+      "message": "按「更多」按钮的宽度调整面板"
+   },
+   "customIcon": {
+      "message": "自定义图示"
+   },
+   "customIconUrl": {
+      "message": "自定义图示网址"
+   },
+   "customSearchButtonsHeader": {
+      "message": "搜索按钮"
+   },
+   "customSearchOptionsDisplay": {
+      "message": "显示自定义搜索选项的样式"
+   },
+   "customSearchTooltip": {
+      "message": "自定义搜索选项"
+   },
+   "customSearchTooltipHint": {
+      "message": "将鼠标悬停在“搜索”按钮上时显示。 使用 %s 作为搜索查询的占位符，%w 是目前域的占位符（用于网站搜索）"
+   },
+   "customSearchUrl": {
+      "message": "自定义搜索网址 \u003Cbr />(使用 %s 作为查询的占位符)"
+   },
+   "cutLabel": {
+      "message": "剪切"
+   },
+   "dayAgo": {
+      "message": "天前"
+   },
+   "daysAgo": {
+      "message": "$DAYS$ 天前",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "debugMode": {
+      "message": "调试模式"
+   },
+   "delayToRevealHoverPanels": {
+      "message": "悬停时显示面板的延迟 (毫秒)"
+   },
+   "delayToRevealSearchTooltip": {
+      "message": "显示面板前的延迟 (毫秒)"
+   },
+   "delayToRevealTranslateTooltip": {
+      "message": "自动翻译前的延迟 (毫秒)"
+   },
+   "deleteLabel": {
+      "message": "删除"
+   },
+   "dictionaryButtonRemark": {
+      "message": "在悬停时寻找维基百科定义"
+   },
+   "dictionaryButtonResponseCharsAmount": {
+      "message": "结果显示的最大字符数"
+   },
+   "dictionaryButtonWordsAmount": {
+      "message": "显示字典按钮的单字"
+   },
+   "dictionaryLabel": {
+      "message": "字典"
+   },
+   "disableForBetterPerformance": {
+      "message": "停用以获得更好的效能"
+   },
+   "disableWordSnapForCode": {
+      "message": "停用程序代码的单字捕捉"
+   },
+   "disableWordSnappingOnCtrlKey": {
+      "message": "如果按下 CTRL 键，则不要按单字选择"
+   },
+   "dontSnapTextfieldSelection": {
+      "message": "不要在文字字段中捕捉选择"
+   },
+   "dragHandleStyle": {
+      "message": "拖动句柄样式"
+   },
+   "draggableTooltip": {
+      "message": "面板可以透过箭头拖动"
+   },
+   "email": {
+      "message": "电子邮件"
+   },
+   "enabled": {
+      "message": "启用"
+   },
+   "excludedDomains": {
+      "message": "排除的网域"
+   },
+   "export": {
+      "message": "导出"
+   },
+   "exportImportSettings": {
+      "message": "导出/导入设定"
+   },
+   "exportSettingsLabel": {
+      "message": "导出设定"
+   },
+   "exportSettingsNote": {
+      "message": "如果导出按钮不起作用，请尝试使用右上角的按钮在新标签中打开此页面"
+   },
+   "extendSelection": {
+      "message": "扩展选区"
+   },
+   "extendSelectionTooltip": {
+      "message": "在元素树中将文本选择扩展一级"
+   },
+   "extensionDescription": {
+      "message": "带有文字选择操作的可自定义弹出窗口"
+   },
+   "fallbackExportLabel": {
+      "message": "导出，另存为 .json 档案"
+   },
+   "floatingOffscreenTooltip": {
+      "message": "滚动到屏幕外时的浮动面板"
+   },
+   "fontSize": {
+      "message": "字号"
+   },
+   "fullOpacityOnHover": {
+      "message": "悬停时完全不透明"
+   },
+   "gmail": {
+      "message": "Gmail 新电子邮件"
+   },
+   "hideOnKeypress": {
+      "message": "按键隐藏"
+   },
+   "hideOnScroll": {
+      "message": "在滚动条上隐藏工具提示"
+   },
+   "hideTooltipOnActionButtonClick": {
+      "message": "单击操作按钮时隐藏面板"
+   },
+   "hideTooltipOnContextMenuOpen": {
+      "message": "隐藏上下文菜单打开时的工具提示"
+   },
+   "hideTooltipWhenCursorMovesAway": {
+      "message": "光标移开时隐藏工具提示"
+   },
+   "hideTranslateButtonForUserLanguage": {
+      "message": "隐藏用户语言的翻译按钮"
+   },
+   "horizontalLayout": {
+      "message": "水平的"
+   },
+   "hoverCustomSearchStyle": {
+      "message": "在搜索按钮悬停时显示"
+   },
+   "iconlabel": {
+      "message": "图标 + 文字"
+   },
+   "imperial": {
+      "message": "英制"
+   },
+   "import": {
+      "message": "导入"
+   },
+   "importAlert": {
+      "message": "此动作将覆盖目前的 Selecton 设定。 你确定吗？"
+   },
+   "importSettingsLabel": {
+      "message": "导入设定"
+   },
+   "inDay": {
+      "message": "天内"
+   },
+   "inDays": {
+      "message": "在 $DAYS$ 天内",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "inMonth": {
+      "message": "月内"
+   },
+   "inMonths": {
+      "message": "在 $MONTHS$ 月内",
+      "placeholders": {
+         "months": {
+            "content": "$1"
+         }
+      }
+   },
+   "inYear": {
+      "message": "年内"
+   },
+   "inYears": {
+      "message": "在 $YEARS$ 年内",
+      "placeholders": {
+         "years": {
+            "content": "$1"
+         }
+      }
+   },
+   "invertColorOnDarkWebsite": {
+      "message": "在深色网站上反转颜色"
+   },
+   "italicLabel": {
+      "message": "斜体"
+   },
+   "languageToTranslate": {
+      "message": "用户的语言 (\u003Ca target='_blank' href='https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes'>ISO 639-1 code\u003C/a>)"
+   },
+   "leftClickBackgroundTab": {
+      "message": "左键点击打开链接作为后台标签"
+   },
+   "linesCount": {
+      "message": "行"
+   },
+   "linkToTextDescription": {
+      "message": "复制指向所选文字的页面链接 (仅在 Chrome 90+ 中打开)"
+   },
+   "linkToTextLabel": {
+      "message": "复制链接"
+   },
+   "liveTranslation": {
+      "message": "按钮悬停时的实时翻译 (Google 翻译)"
+   },
+   "mailto": {
+      "message": "电子邮件客户程序"
+   },
+   "markedLabel": {
+      "message": "突出显示"
+   },
+   "markerLabel": {
+      "message": "突出显示"
+   },
+   "markersLabel": {
+      "message": "突出显示"
+   },
+   "maxIconsInRow": {
+      "message": "列中的图示数量"
+   },
+   "maxMarkerPagesToStore": {
+      "message": "储存突显的最大页数"
+   },
+   "maxTooltipButtonsToShow": {
+      "message": "要在工具提示中显示的按钮数"
+   },
+   "metric": {
+      "message": "公制"
+   },
+   "middleClickHidesTooltip": {
+      "message": "中键点击 (在后台打开) 隐藏面板"
+   },
+   "monthAgo": {
+      "message": "个月前"
+   },
+   "monthsAgo": {
+      "message": "$MONTHS$ 几个月前",
+      "placeholders": {
+         "months": {
+            "content": "$1"
+         }
+      }
+   },
+   "moveDownLabel": {
+      "message": "下移"
+   },
+   "moveDownTooltipEffect": {
+      "message": "下移"
+   },
+   "moveUpLabel": {
+      "message": "上移"
+   },
+   "moveUpTooltipEffect": {
+      "message": "上移"
+   },
+   "noDefinitionFound": {
+      "message": "未找到定义"
+   },
+   "noTooltipEffect": {
+      "message": "没有效果"
+   },
+   "noTranslationFound": {
+      "message": "没有找到翻译"
+   },
+   "onlyicon": {
+      "message": "仅图示"
+   },
+   "onlylabel": {
+      "message": "仅文字"
+   },
+   "openInNewTab": {
+      "message": "在新分页中打开"
+   },
+   "openLinkLabel": {
+      "message": "打开"
+   },
+   "overCursor": {
+      "message": "光标上方"
+   },
+   "panelCustomSearchStyle": {
+      "message": "在主面板中显示"
+   },
+   "pasteLabel": {
+      "message": "粘贴"
+   },
+   "performSimpleMathOperations": {
+      "message": "执行简单的数学计算"
+   },
+   "preferCurrencySymbol": {
+      "message": "首选货币符号而不是程序代码"
+   },
+   "preferredMapsService": {
+      "message": "首选地图服务"
+   },
+   "preferredMetricsSystem": {
+      "message": "首选计量单位"
+   },
+   "preferredNewEmailMethod": {
+      "message": "建立新电子邮件的首选方法"
+   },
+   "preferredSearchEngine": {
+      "message": "搜索引擎"
+   },
+   "preferredTranslateService": {
+      "message": "翻译服务"
+   },
+   "quote": {
+      "message": "引用"
+   },
+   "quoteButtonRemark": {
+      "message": "(当页面上找到支持的文字字段时)"
+   },
+   "recentMarkersLabel": {
+      "message": "最近突显"
+   },
+   "recreateTooltipAfterScroll": {
+      "message": "滚动或调整窗口大小后重新建立工具提示"
+   },
+   "removeCustomIcon": {
+      "message": "移除自定义图示"
+   },
+   "removeSelectionOnActionButtonClick": {
+      "message": "选择动作后删除文字选择"
+   },
+   "resetDefaults": {
+      "message": "复原默认值"
+   },
+   "reverseTooltipButtonsOrder": {
+      "message": "反转按钮的次序"
+   },
+   "rhombus": {
+      "message": "菱形"
+   },
+   "scaleUpFromBottomTooltipEffect": {
+      "message": "纵向扩展 (从底部)"
+   },
+   "scaleUpTooltipEffect": {
+      "message": "纵向扩展"
+   },
+   "searchLabel": {
+      "message": "搜索"
+   },
+   "searchingDefinitions": {
+      "message": "搜索定义"
+   },
+   "secondaryTooltipEnabled": {
+      "message": "已启用工具提示"
+   },
+   "secondaryTooltipIconSize": {
+      "message": "图示大小 (px)"
+   },
+   "secondaryTooltipLayout": {
+      "message": "按钮布局"
+   },
+   "selectionCenter": {
+      "message": "选择中心"
+   },
+   "selectionHeader": {
+      "message": "文字选择"
+   },
+   "selectonSettings": {
+      "message": "SelectON 设定"
+   },
+   "shadowOpacity": {
+      "message": "阴影不透明度"
+   },
+   "shiftTooltipWhenWebsiteHasOwn": {
+      "message": "当网站显示自己的文字选择时，尝试向上移动工具提示"
+   },
+   "shouldOverrideWebsiteSelectionColor": {
+      "message": "覆盖页面的突出显示颜色"
+   },
+   "showButtonBorders": {
+      "message": "显示按钮分隔符"
+   },
+   "showButtonLabelOnHover": {
+      "message": "悬停时显示按钮卷标"
+   },
+   "showDictionaryButton": {
+      "message": "显示字典按钮"
+   },
+   "showDotForHoverButtons": {
+      "message": "在具有悬停事件的按钮上显示点"
+   },
+   "showEmailButton": {
+      "message": "新增电子邮件按钮"
+   },
+   "showInfoPanel": {
+      "message": "显示信息面板 (单字和符号计数)"
+   },
+   "showOnMap": {
+      "message": "在地图上显示"
+   },
+   "showOnMapButtonEnabled": {
+      "message": "新增按钮以显示在地图上"
+   },
+   "showSecondaryTooltipTitleOnHover": {
+      "message": "悬停时显示标题"
+   },
+   "showStatsOnCopyButtonHover": {
+      "message": "在复制按钮悬停时显示统计信息"
+   },
+   "showTooltipArrow": {
+      "message": "显示工具提示箭头"
+   },
+   "showTranslateButton": {
+      "message": "显示翻译按钮"
+   },
+   "showTranslateIfLanguageUnknown": {
+      "message": "如果未检测到语言，则显示翻译按钮"
+   },
+   "showUnconvertedValue": {
+      "message": "显示转换前的原始值"
+   },
+   "showUpdateNotification": {
+      "message": "显示更新通知"
+   },
+   "snapSelectionToWord": {
+      "message": "按单字对齐文字选择"
+   },
+   "square": {
+      "message": "正方形"
+   },
+   "strikeLabel": {
+      "message": "击打"
+   },
+   "symbolsCount": {
+      "message": "字符"
+   },
+   "testPageButton": {
+      "message": "测试设定"
+   },
+   "textFieldsHeader": {
+      "message": "文字字段"
+   },
+   "textSelectionBackground": {
+      "message": "选择颜色"
+   },
+   "textSelectionBackgroundOpacity": {
+      "message": "背景不透明度"
+   },
+   "textSelectionColor": {
+      "message": "文字颜色"
+   },
+   "today": {
+      "message": "今天"
+   },
+   "tooltipBackground": {
+      "message": "背景颜色"
+   },
+   "tooltipInvertedBackground": {
+      "message": "背景颜色 (深色页面)"
+   },
+   "tooltipOpacity": {
+      "message": "工具提示不透明度"
+   },
+   "tooltipPosition": {
+      "message": "工具提示的水平对齐"
+   },
+   "tooltipRevealEffect": {
+      "message": "工具提示显示效果"
+   },
+   "translateLabel": {
+      "message": "翻译"
+   },
+   "translating": {
+      "message": "正在翻译"
+   },
+   "triangle": {
+      "message": "三角形"
+   },
+   "updateNotificationMessage": {
+      "message": "点击此处查看新功能"
+   },
+   "updateNotificationTitle": {
+      "message": "SelectON 已更新为 $VERSION$",
+      "placeholders": {
+         "version": {
+            "content": "$1",
+            "example": "1.0.0"
+         }
+      }
+   },
+   "updatePageToSeeChanges": {
+      "message": "重新整理页面以查看更改"
+   },
+   "updateRatesEveryDays": {
+      "message": "费率更新间隔 (天)"
+   },
+   "useCustomStyle": {
+      "message": "为工具提示使用自定义样式"
+   },
+   "useIconFromGoogle": {
+      "message": "使用来自 Google 的图示"
+   },
+   "verticalLayout": {
+      "message": "垂直的"
+   },
+   "verticalLayoutTooltip": {
+      "message": "使用垂直工具提示布局 (试验性)"
+   },
+   "verticalSecondaryTooltip": {
+      "message": "显示为垂直列表 (停用水平)"
+   },
+   "visitGithub": {
+      "message": "访问 GitHub 页面"
+   },
+   "whatsNew": {
+      "message": "新增功能"
+   },
+   "wordSnappingBlacklist": {
+      "message": "要排除的网域"
+   },
+   "wordsCount": {
+      "message": "单词"
+   },
+   "writeAReview": {
+      "message": "写评论"
+   },
+   "yearAgo": {
+      "message": "年前"
+   },
+   "yearsAgo": {
+      "message": "$YEARS$ 年前",
+      "placeholders": {
+         "years": {
+            "content": "$1"
+         }
+      }
+   }
+}

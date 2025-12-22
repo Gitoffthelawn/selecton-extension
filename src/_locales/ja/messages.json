@@ -477,6 +477,9 @@
    "reverseTooltipButtonsOrder": {
       "message": "ボタンの順序を逆にする"
    },
+   "rhombus": {
+      "message": "菱形"
+   },
    "scaleUpFromBottomTooltipEffect": {
       "message": "スケールアップ（下から）"
    },
@@ -563,6 +566,9 @@
    },
    "snapSelectionToWord": {
       "message": "単語単位でのテキスト選択"
+   },
+   "square": {
+      "message": "正方形"
    },
    "strikeLabel": {
       "message": "取り消し線"

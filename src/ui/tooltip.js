@@ -234,6 +234,9 @@ function calculateTooltipPosition(e, recreated = false) {
 
         /// Calculating DX
         dxToShowTooltip = e.clientX;
+        /// Stick to text selection dx boundaries
+        if (dxToShowTooltip < selStartDimensions.dx) dxToShowTooltip = selStartDimensions.dx + 5;
+        else if (dxToShowTooltip > selEndDimensions.dx) dxToShowTooltip = selEndDimensions.dx - 5;
 
     } else {
         /// Calculating DY
@@ -277,9 +280,9 @@ function calculateTooltipPosition(e, recreated = false) {
         }
     }
 
+    /// Keep panel floating when off-screen
+    floatingTooltipTop = false; floatingTooltipBottom = false;
     if (configs.floatingOffscreenTooltip) {
-        /// Keep panel floating when off-screen
-        floatingTooltipTop = false; floatingTooltipBottom = false;
         if (dyToShowTooltip < 0) {
             dyToShowTooltip = dyForFloatingTooltip;
             floatingTooltipTop = window.scrollY;
@@ -320,7 +323,7 @@ function calculateTooltipPosition(e, recreated = false) {
 
     showTooltip(dxToShowTooltip, dyToShowTooltip);
 
-    if (configs.addDragHandles && canAddDragHandles)
+    if (configs.addDragHandles && canAddDragHandles && !floatingTooltipTop && !floatingTooltipBottom)
         setDragHandles(selStartDimensions, selEndDimensions);
 }
 

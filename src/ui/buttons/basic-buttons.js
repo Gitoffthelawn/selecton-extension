@@ -6,6 +6,10 @@ function addBasicTooltipButtons(layout) {
         const isContentEditable = textField.getAttribute('contenteditable') !== null;
 
         if (selection.toString() !== '') {
+
+            /// Prevent showing when clicked a readonly cell in Google spreadsheet
+            if (selection.toString().trim().length == 0) return;
+
             try {
                 /// Add a cut button 
                 addBasicTooltipButton(cutLabel, cutButtonIcon, function () {
@@ -46,6 +50,18 @@ function addBasicTooltipButtons(layout) {
                     hideTooltip();
                 });
 
+                /// Add 'clear' button
+                addBasicTooltipButton(clearLabel, clearIcon, function () {
+                    removeSelectionOnPage();
+                    textField.focus();
+
+                    if (textField.getAttribute('contenteditable') !== null)
+                        textField.innerHTML = '';
+                    else {
+                        textField.value = '';
+                    }
+                });
+
                 if (configs.addFontFormatButtons) {
 
                     /// Italic button
@@ -83,7 +99,7 @@ function addBasicTooltipButtons(layout) {
             if (configs.addPasteButton)
                 try {
                     /// Add paste button 
-                    addBasicTooltipButton(pasteLabel, pasteButtonIcon, function () {
+                    let pasteButton = addBasicTooltipButton(pasteLabel, pasteButtonIcon, function () {
                         textField.focus();
 
                         if (textField.getAttribute('contenteditable') !== null) {
@@ -97,6 +113,22 @@ function addBasicTooltipButtons(layout) {
                         removeSelectionOnPage();
                         // hideTooltip();
                     }, true);
+
+                    if (configs.showPasteContentPreview)
+                        navigator.clipboard
+                            .readText()
+                            .then(function(clipText) {
+                                if (clipText && clipText.length > 0) {
+                                    const t = clipText.length > 18 ? clipText.substring(0, 18) + '…' : clipText;
+                                    const span = pasteButton.querySelector('span');
+                                    if (span) {
+                                        span.innerHTML += ` '<span class='color-highlight'>${t}</span>'`;
+                                    } else {
+                                        pasteButton.innerHTML += ` '<span class='color-highlight'>${t}</span>'`;
+                                    } 
+
+                                }
+                            });
 
                 } catch (e) { if (configs.debugMode) console.log(e); }
 

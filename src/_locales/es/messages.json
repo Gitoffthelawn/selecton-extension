@@ -471,6 +471,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Invertir el orden de los botones"
     },
+    "rhombus": {
+        "message": "Rombo"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Escalar hacia arriba (desde abajo)"
     },
@@ -557,6 +560,9 @@
     },
     "snapSelectionToWord": {
         "message": "Ajustar selección de texto por palabra"
+    },
+    "square": {
+        "message": "Cuadrado"
     },
     "strikeLabel": {
         "message": "Tachado"

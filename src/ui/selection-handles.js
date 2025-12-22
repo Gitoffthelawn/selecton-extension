@@ -29,12 +29,12 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
 
     /// Try to adapt handle height to selected text's line-height
     try {
-        selectionHandleLineHeight = (dragHandleIndex == 0 ? selStartDimensions.lineHeight : selEndDimensions.lineHeight) + 5;
+        selectionHandleLineHeight = (dragHandleIndex == 0 ? selStartDimensions.lineHeight : selEndDimensions.lineHeight) + 3;
 
         if (!selectionHandleLineHeight) {
             const selectedTextLineHeight = window.getComputedStyle(selection.anchorNode.parentElement, null).getPropertyValue('line-height');
             if (selectedTextLineHeight !== null && selectedTextLineHeight !== undefined && selectedTextLineHeight.includes('px'))
-                selectionHandleLineHeight = parseInt(selectedTextLineHeight.replaceAll('px', '')) + 5;
+                selectionHandleLineHeight = parseInt(selectedTextLineHeight.replaceAll('px', '')) + 3;
         }
 
     } catch (e) {
@@ -98,6 +98,12 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
                 circleDiv.style.right = `${-lineWidth}px`;
             } else
                 circleDiv.style.clipPath = 'polygon(0% 0%, 100% 100%, 100% 0%)';
+        } else if (configs.dragHandleStyle == 'square') {
+            circleDiv.classList.add('draghandle-square');
+            circleDiv.style.right = `${(circleHeight / 2) - (lineWidth / 2)}px`;
+        } else if (configs.dragHandleStyle == 'rhombus') {
+            circleDiv.classList.add('draghandle-rhombus');
+            circleDiv.style.right = `${(circleHeight / 2) - (lineWidth / 2)}px`;
         } else {
             circleDiv.style.right = `${(circleHeight / 2) - (lineWidth / 2)}px`;
         }

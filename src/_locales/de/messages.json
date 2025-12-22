@@ -465,6 +465,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Kehren Sie die Reihenfolge der Tasten"
     },
+    "rhombus": {
+        "message": "Raute"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Aufwärts skalieren (von unten)"
     },
@@ -551,6 +554,9 @@
     },
     "snapSelectionToWord": {
         "message": "Textauswahl nach Wort ausrichten"
+    },
+    "square": {
+        "message": "Quadrat"
     },
     "strikeLabel": {
         "message": "Durchgestrichen"

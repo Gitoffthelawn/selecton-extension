@@ -7,7 +7,7 @@ function returnTooltipRevealTransform(endPosition = true) {
         case 'moveUpTooltipEffect': return endPosition ? `translate(${dx},0)` : `translate(${dx}, ${dyPercentOffset}%)`;
         case 'moveDownTooltipEffect': return endPosition ? `translate(${dx},0)` : `translate(${dx}, -${dyPercentOffset}%)`;
         case 'scaleUpTooltipEffect': return endPosition ? `translate(${dx},0) scale(1.0)` : `translate(${dx},0) scale(0.0)`;
-        case 'scaleUpFromBottomTooltipEffect': return endPosition ? `translate(${dx},0) scale(1.0)` : `translate(${dx},0) scale(0.0)`;
+        case 'scaleUpFromBottomTooltipEffect': return endPosition ? `translate(${dx},0) scale(1.0)` : `translate(${dx},${dyPercentOffset / 2}%) scale(0.0)`;
     }
 }
 
@@ -173,6 +173,8 @@ function setCopyButtonTitle(copyButton, symbols, words) {
         const lines = (selectedText.match(/\n/g) || '').length;
         if (lines > 0) infoString += ` · ${lines + 1} ` + chrome.i18n.getMessage('linesCount').toLowerCase();
     } else{
+        if (!words) words = selectedText.split(' ').length;
+        
         if (words && words > 1) 
             infoString += ` · ${words} ${chrome.i18n.getMessage('wordsCount').toLowerCase()}`;
     }
@@ -206,6 +208,29 @@ function setCopyButtonTitle(copyButton, symbols, words) {
             // }, 5)
         }
         infoPanel.innerText = infoString;
+
+        // /// Add input field to edit selected text (draft)
+        // infoPanel.style.borderBottom = 'none';
+        // const textEdit = document.createElement('input');
+        // textEdit.type = 'text';
+        // textEdit.className = 'selecton-info-panel-text-edit';
+        // textEdit.value = selectedText;
+        // textEdit.style = `color:white; background-color: rgba(256,256,256,0.1); border: 1px solid gray; outline: none; width: 100%; font-size: 14px;color:white;display:block;border-radius:2px;margin-bottom:3px;text-align:center;`;
+        // textEdit.oninput = function () {
+        //     selectedText = textEdit.value;
+        //     infoString = `${symbols ?? selectedText.length} ${chrome.i18n.getMessage('symbolsCount').toLowerCase()}`;
+        //     infoPanel.innerText = infoString;
+        // }
+        // textEdit.onmousedown = function (e) {
+        //     e.stopPropagation();
+        //     e.stopImmediatePropagation();
+        //     // e.preventDefault();
+        // }
+        // textEdit.onkeydown = function (e) {
+        //     e.stopPropagation();
+        //     e.stopImmediatePropagation();
+        // }
+        // configs.verticalLayoutTooltip ? tooltip.appendChild(textEdit) : tooltip.insertBefore(textEdit, tooltip.children[2]);
     }
 }
 
@@ -228,6 +253,7 @@ function addBasicTooltipButton(label, icon, onClick, isFirstButton = false, icon
     }
     button.onmouseup = function(e){
         if (e.button == 0){
+            e.stopPropagation();
             onClick(e);
 
             if (configs.hideTooltipOnActionButtonClick){

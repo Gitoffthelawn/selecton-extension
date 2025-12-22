@@ -376,6 +376,7 @@ function addContextualButtons(callbackOnFinish) {
                     }
                     else {
                         emailButton.appendChild(createImageIconForButton(emailButtonIcon, (emailText.length > linkSymbolsToShow ? emailText.substring(0, linkSymbolsToShow) + '...' : emailText), true));
+                        if (emailText.length > linkSymbolsToShow) emailButton.setAttribute('title', emailText);
                         emailButton.classList.add('color-highlight');
                     }
 

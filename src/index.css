@@ -246,7 +246,7 @@
 .selecton-tooltip-draghandle-circle {
   border: 0.25px solid var(--selecton-outline-color);
   z-index: 99998;
-  border-radius: 50%;
+  border-radius: 50% !important;
   background: var(--selecton-background-color);
   position: relative;
   height: var(--selecton-handle-circle-radius);
@@ -254,8 +254,17 @@
 }
 
 .draghandle-triangle {
-  border-radius: 4px;
+  border-radius: 4px !important;
   transform: translate(-50%) rotate(45deg);
+}
+
+.draghandle-square {
+  border-radius: 1.5px !important;
+}
+
+.draghandle-rhombus {
+  border-radius: 1.5px !important;
+  transform: rotate(45deg);
 }
 
 .selecton-button-img-icon {
@@ -373,6 +382,7 @@
   transition: opacity 200ms;
   padding: 0px 4px;
   cursor: pointer;
+  font-style: normal !important;
 }
 
 .selecton-marker-highlight:hover .marker-highlight-delete {

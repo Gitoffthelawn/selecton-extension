@@ -468,6 +468,9 @@
     "reverseTooltipButtonsOrder": {
         "message": "Düğmelerin sırasını tersine çevirme"
     },
+    "rhombus": {
+        "message": "Eşkenar dörtgen"
+    },
     "scaleUpFromBottomTooltipEffect": {
         "message": "Ölçeği büyütme (alttan)"
     },
@@ -554,6 +557,9 @@
     },
     "snapSelectionToWord": {
         "message": "Metin seçimini sözcükle yaslama"
+    },
+    "square": {
+        "message": "Kare"
     },
     "strikeLabel": {
         "message": "Grev"
