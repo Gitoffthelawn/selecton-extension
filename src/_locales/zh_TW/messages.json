@@ -12,7 +12,7 @@
     "message": "新增按鈕以將連結複製到所選文字"
   },
   "addCalendarButton": {
-    "message": "為日期添加日曆按鈕"
+    "message": "為日期新增日曆按鈕"
   },
   "addClearButton": {
     "message": "點擊非空欄位時顯示「清除」按鈕"
@@ -24,7 +24,7 @@
     "message": "新增選擇拖動手把"
   },
   "addExtendSelectionButton": {
-    "message": "將按鈕添加到擴展目前文字選擇"
+    "message": "將按鈕新增到擴展目前文字選擇"
   },
   "addFontFormatButtons": {
     "message": "新增字體格式按鈕 (斜體、粗體)"
