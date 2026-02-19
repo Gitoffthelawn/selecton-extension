@@ -81,7 +81,7 @@ async function fetchDefinition(text, definitionPanel, wikiButton) {
             //     definitionPanel.appendChild(langLabel);
             // }
 
-            if (configs.debugMode) console.log('Dictionary definition fetched:', resultDefinition);
+            if (configs.debugMode) console.log('Wikipedia data fetched:', resultDefinition);
             /// Remove excessive padding
             resultDefinition = resultDefinition.replaceAll(`\n\n\n`, `\n\n`);
 

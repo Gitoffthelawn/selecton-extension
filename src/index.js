@@ -110,9 +110,6 @@ function setTextSelectionColor() {
   css.type = 'text/css';
   css.appendChild(document.createTextNode(rule)); // Support for the rest
   document.getElementsByTagName("head")[0].appendChild(css);
-
-  if (configs.debugMode)
-    console.log('Selecton applied custom selection color')
 }
 
 function setDocumentStyles(){
@@ -170,12 +167,6 @@ function loadCurrencyRates(){
       let dayOfNextFetch = new Date(ratesLastFetchedDate);
       const oneDayInMilliseconds = 1000 * 60 * 60 * 24;
 
-      if (configs.debugMode) {
-        console.log('--- Check dates to update currency rates ---');
-        console.log('Today: ' + today);
-        console.log('Date of last fetch: ' + dayOfNextFetch);
-      }
-
       today = today.getTime();
       dayOfNextFetch = new Date(dayOfNextFetch.getTime() + (updateRatesEveryDays * oneDayInMilliseconds));
 
@@ -187,7 +178,6 @@ function loadCurrencyRates(){
 
       loadCurrencyRatesFromMemory();
       if (today >= dayOfNextFetch) {
-        if (configs.debugMode) console.log('Trying to fetch updated currency rates...');
         fetchCurrencyRates(); /// update rates from server
       } 
     }
@@ -323,7 +313,7 @@ function initMouseListeners() {
           target.type == 'email' || 
           target.type == 'search' || 
           target.type == 'text'
-      )) ||  target.tagName === "TEXTAREA" || target.hasAttribute('contenteditable');
+      )) || (target.tagName === "TEXTAREA" && !target.hasAttribute('aria-readonly')) || target.hasAttribute('contenteditable');
 
     if (isTextFieldFocused && configs.addActionButtonsForTextFields) {
       /// Special handling for Firefox 
@@ -374,7 +364,6 @@ function initMouseListeners() {
     window.addEventListener('popstate', function () {
       hideTooltip();
       hideDragHandles();
-      if (configs.debugMode) console.log('Selecton tooltip was hidden on url change');
     });
   } catch (error) {
     if (configs.debugMode)
@@ -406,9 +395,6 @@ function initMouseListeners() {
   window.addEventListener('resize', function (e) {
     if (tooltipIsShown == false) return;
 
-    if (configs.debugMode)
-      console.log('hiding all Selecton overlays on window resize...');
-
     hideTooltip(false);
     hideDragHandles(false);
     recreateTooltip();
@@ -418,9 +404,6 @@ function initMouseListeners() {
   document.addEventListener('dragstart', function (e) {
     if (tooltipIsShown == false) return;
     if (e.target.classList && e.target.classList.contains('selection-popup-button')) return;
-
-    if (configs.debugMode)
-      console.log('hiding all Selecton overlays on drag start...');
 
     hideTooltip();
     hideDragHandles();
@@ -444,9 +427,6 @@ function initMouseListeners() {
       hideTooltip(); 
       hideDragHandles();
     }));
-
-  if (configs.debugMode)
-    console.log('Selecton initiated mouse listeners');
 
   /// Lazy loading
 

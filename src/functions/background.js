@@ -83,7 +83,7 @@ let isUpdating = false;
 async function fetchCurrencyRates(debugMode, currenciesList) {
     if (!currenciesList) return;
     if (isUpdating) return;
-    if (debugMode) console.log('Selecton needs to update currency rates...');
+    if (debugMode) console.log('SelectON updates currency rates...');
     if (debugMode) console.log(currenciesList);
     isUpdating = true;
 
@@ -108,7 +108,7 @@ async function fetchCurrencyRates(debugMode, currenciesList) {
         const date = jsonObj['date'];
 
         if (!date) {
-            if (debugMode) console.log('Error while fetching currency rates from network');
+            if (debugMode) console.log('Error fetching currency rates');
             return;
         }
 

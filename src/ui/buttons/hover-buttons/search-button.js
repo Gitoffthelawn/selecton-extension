@@ -148,7 +148,7 @@ function createSearchOptionButton(icon, title, url, buttonPrototype) {
 
     if (configs.debugMode)
         imgButton.addEventListener('error', function () {
-                console.log('error loading favicon for: ' + url + ' because of security policies of website');
+                console.log('error loading favicon for: ' + url);
         });
 
     imgButton.setAttribute('src', icon !== null && icon !== undefined && icon !== '' ? icon : 'https://www.google.com/s2/favicons?domain=' + url.split('/')[2])

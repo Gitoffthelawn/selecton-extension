@@ -230,16 +230,10 @@ function saveAllMarkers() {
 
 function restoreMarkers() {
     if (configs.debugMode) {
-        console.log('--------');
         console.log('Searching for markers on current page...');
     }
 
     chrome.storage.local.get(['websiteMarkers'], function (value) {
-
-        if (configs.debugMode) {
-            console.log('restored markers:');
-            console.log(value);
-        }
 
         if (value['websiteMarkers'] && value['websiteMarkers'][window.location.href]) {
             let markersForCurrentPage = value['websiteMarkers'][window.location.href]['markers'];

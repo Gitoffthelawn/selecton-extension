@@ -50,9 +50,6 @@ function getSelectionCoordinates(atStart) {
 function snapSelectionByWords(sel) {
 
     /// TODO: Don't extend selection if next/prev word is: ' '
-    if (configs.debugMode)
-        console.log('Snapping selection by word...');
-
     if (sel && !sel.isCollapsed) {
         let selString = sel.toString();
         const initialStringLength = selString.length;
@@ -488,11 +485,9 @@ function extendSelectionToParentEl(){
 
         const newSelection = s.toString().trim();
         if (prevSelection === newSelection && extendParentSelectionCounter < 5) {
-            if (configs.debugMode) console.log('Selection has not changed! Attempting one more time: ' + extendParentSelectionCounter);
             extendParentSelectionCounter += 1;
             extendSelectionToParentEl();
         } else {
-            if (configs.debugMode) console.log('Finished extending text selection');
             extendParentSelectionCounter = 0;
         }
     }, 0)

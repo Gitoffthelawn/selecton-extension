@@ -4,11 +4,6 @@ function setDefaultLocales() {
     let browserLocale = navigator.language || navigator.userLanguage;
     let browserCountry;
 
-    if (configs.debugMode) {
-        console.log('Browser locale is: ' + browserLocale);
-        console.log('Configuring default locale settings...');
-    }
-
     browserLocale.replaceAll(' ', '');
     if (browserLocale.includes('-')) {
         let parts = browserLocale.split('-');
@@ -31,13 +26,6 @@ function setDefaultLocales() {
         for (let i = 0, l = keys.length; i < l; i++) {
             let key = keys[i];
             if (key.includes(browserCountry)) browserCurrency = key;
-        }
-
-        if (configs.debugMode) {
-            console.log(`Default browser language: ${browserLanguage}`);
-            console.log(`Default browser metrics: ${browserMetricSystem}`);
-            console.log(`Default browser currency: ${browserCurrency}`);
-            console.log('Saved default locales to memory');
         }
     }
 

@@ -281,6 +281,7 @@
   width: var(--selecton-button-icon-height) !important;
   background-repeat: no-repeat !important;
   background-size: contain !important;
+  pointer-events: none !important;
 }
 
 .no-filter-icon {

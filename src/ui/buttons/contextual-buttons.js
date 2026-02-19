@@ -1,7 +1,4 @@
 function addContextualButtons(callbackOnFinish) {
-    if (configs.debugMode)
-        console.log('Checking to add contextual buttons...');
-
     if (selection == null) return;
 
     const loweredSelectedText = selectedText.toLowerCase();
@@ -23,14 +20,12 @@ function addContextualButtons(callbackOnFinish) {
                     (value["currencySymbol"] && selectedText.includes(value["currencySymbol"])) || 
                     (value["symbol"] && selectedText.includes(value["symbol"]))
                 ) {
-                    if (configs.debugMode) console.log('found currency match for: ' + (selectedText.includes(key) ? key : value['currencySymbol']));
                     match = true;
                 } else {
                     const currencyKeywords = value["currencyKeywords"] || value["keywords"];
                     if (currencyKeywords !== null && currencyKeywords !== undefined)
                         for (i in currencyKeywords) {
                             if (loweredSelectedText.includes(currencyKeywords[i])) {
-                                if (configs.debugMode) console.log('found currency match for: ' + currencyKeywords[i]);
                                 match = true;
                             }
                         }
@@ -186,14 +181,12 @@ function addContextualButtons(callbackOnFinish) {
                 if (selectedText.includes(nonConvertedUnit)) {
                     /// don't duplicate when found 'pound' (as it's also a currency)
                     if (nonConvertedUnit == 'pound' && tooltip.children.length == 4) return;
-                    if (configs.debugMode) console.log('found key: ' + nonConvertedUnit);
                     includesKeyword = i; break;
                 } else if (unitsKeywords[key]['variations']) {
                     const keyVariations = unitsKeywords[key]['variations'];
 
                     for (let i2 = 0, l2 = keyVariations.length; i2 < l2; i2++) {
                         if (selectedText.includes(keyVariations[i2])) {
-                            if (configs.debugMode) console.log('found key: ' + keyVariations[i2]);
                             includesKeyword = i; break;
                         }
                     }
@@ -444,20 +437,11 @@ function addContextualButtons(callbackOnFinish) {
                 // let numbers = extractAmountFromSelectedText(textToProccess);   /// Check if selected text contains numbers
                 if (configs.preferredMetricsSystem == 'metric') {
                     if (textToProccess.includes(' PM') || textToProccess.includes(' AM')) {
-                        if (configs.debugMode)
-                            console.log('converting from 12h to 24...');
                         textToProccess = convertTime12to24(textToProccess);
-                        if (configs.debugMode)
-                            console.log('result: ' + textToProccess);
                     }
                 } else {
                     if (textToProccess.includes(':') && !textToProccess.includes(' ') && !textToProccess.includes('AM') && !textToProccess.includes('PM')) {
-                        if (configs.debugMode)
-                            console.log('converting from 12h to 24...');
                         textToProccess = convertTime24to12(textToProccess);
-
-                        if (configs.debugMode)
-                            console.log('result: ' + textToProccess);
                     }
                 }
 
@@ -484,10 +468,6 @@ function addContextualButtons(callbackOnFinish) {
 
                             if (numbers.length == 2 || numbers.length == 3) {
                                 let today = new Date();
-                                if (configs.debugMode) {
-                                    console.log('today:');
-                                    console.log(today);
-                                }
 
                                 /// correct timezone to dst
                                 function isDST(d) {
@@ -502,23 +482,9 @@ function addContextualButtons(callbackOnFinish) {
 
                                 let modifier = selectedText.includes(' PM') ? ' PM' : selectedText.includes(' AM') ? ' AM' : '';
                                 let dateStringWithTimeReplaced = `${today.getMonth() + 1}/${today.getDate()}/${today.getFullYear()} ${numbers[0]}:${numbers[1]}${modifier} ${timeZoneKeywords[marker]}`;
-
-                                if (configs.debugMode) {
-                                    console.log('setting date from:');
-                                    console.log(dateStringWithTimeReplaced);
-                                }
-
                                 let d = new Date(dateStringWithTimeReplaced); /// '6/29/2011 4:52:48 PM UTC'
-                                if (configs.debugMode) {
-                                    console.log('setted date:');
-                                    console.log(d)
-                                }
 
                                 convertedTime = d.toLocaleTimeString().substring(0, 5);
-                                if (configs.debugMode) {
-                                    console.log('converted time:');
-                                    console.log(convertedTime);
-                                }
                             }
                         }
                         break;

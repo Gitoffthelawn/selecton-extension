@@ -50,9 +50,6 @@ function onTooltipButtonClick(e, url, text) {
 }
 
 function checkTooltipForCollidingWithSideEdges() {
-    if (configs.debugMode)
-        console.log('Checking Selecton tooltip for colliding with side edges...');
-
     if (tooltip == null) return;
 
     let dx = tooltip.getBoundingClientRect().left;
@@ -370,8 +367,6 @@ function makeTooltipElementDraggable(element, compensateTooltipHeight = true) {
     element.onmousedown = function (e) {
         isDraggingTooltip = true;
         e.preventDefault();
-        if (configs.debugMode)
-            console.log('Started dragging tooltip...');
 
         tooltip.style.left = `0px`;
         tooltip.style.top = `0px`;
@@ -401,9 +396,6 @@ function makeTooltipElementDraggable(element, compensateTooltipHeight = true) {
             tooltip.style.top = `${tooltipOnBottom ? (e.clientY + tooltipHeightCompensation) : (e.clientY - tooltipHeightCompensation)}px`;
             tooltip.style.transform = null;
             tooltip.style.pointerEvents = 'auto';
-
-            if (configs.debugMode)
-                console.log('Dragging tooltip finished');
         };
 
         if (configs.hideTooltipWhenCursorMovesAway) {

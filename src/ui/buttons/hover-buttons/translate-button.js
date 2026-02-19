@@ -3,9 +3,6 @@ function addTranslateButton(onFinish, selectionLength, wordsCount) {
         if (!chrome.i18n.detectLanguage) proccessButton(true);
         else
             chrome.i18n.detectLanguage(selectedText, function (result) {
-                if (configs.debugMode)
-                    console.log('Checking if its needed to add Translate button...');
-
                 /// Show Translate button when language was not detected
                 let shouldTranslate = false;
 
@@ -40,19 +37,12 @@ function addTranslateButton(onFinish, selectionLength, wordsCount) {
                             shouldTranslate = false;
                         else shouldTranslate = true;
                     } else {
-                        if (configs.debugMode) console.log('Selecton failed to detect language of selected text');
                         shouldTranslate = configs.showTranslateIfLanguageUnknown ?? false;
                     }
                 } else {
-                    if (configs.debugMode) console.log('Selecton failed to detect language of selected text');
                     shouldTranslate = configs.showTranslateIfLanguageUnknown ?? false;
                 }
-
-                if (configs.debugMode)
-                    console.log(`Should translate: ${shouldTranslate}`);
-
                 proccessButton(shouldTranslate, languageOfSelectedText);
-
             });
     } catch (e) {
         if (configs.debugMode)

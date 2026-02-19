@@ -13,14 +13,9 @@ function createTooltip(e, recreated = false) {
         if (configs.snapSelectionToWord && !recreated) {
             // if (isTextFieldFocused == true && configs.dontSnapTextfieldSelection == true) {
             if (isTextFieldFocused == true) {
-                if (configs.debugMode)
-                    console.log('Word snapping rejected while textfield is focused');
             } else if (configs.disableWordSnappingOnCtrlKey && e !== undefined && (e.ctrlKey == true || e.metaKey == true)) {
-                if (configs.debugMode)
-                    console.log('Word snapping rejected due to pressed CTRL key');
             } else {
                 // selectedText = selection.toString();
-
                 selectedTextIsCode = false;
                 if (configs.disableWordSnapForCode || configs.showInfoPanel)
                     for (let i = 0, l = codeMarkers.length; i < l; i++) {
@@ -156,10 +151,6 @@ function setUpTooltip(recreated = false) {
                     tooltip.style.opacity = configs.tooltipOpacity;
                 } catch (e) { }
             }, 1);
-        }
-        if (configs.debugMode) {
-            console.log('Selecton tooltip inactive opacity: ' + configs.tooltipOpacity.toString());
-            console.log('Set tooltip opacity listeners');
         }
     }
 
@@ -357,7 +348,6 @@ function hideTooltip(animated = true) {
 
     if (configs.debugMode) {
         console.log('--- Hiding Selecton tooltips ---');
-        console.log('Checking for existing tooltips...');
     }
 
     /// Hide all tooltips

@@ -65,25 +65,44 @@ function addBasicTooltipButtons(layout) {
                 if (configs.addFontFormatButtons) {
 
                     /// Italic button
-                    addBasicTooltipButton(italicLabel, italicTextIcon, function() {
+                    let italicBtn = addBasicTooltipButton(italicLabel, italicTextIcon, function() {
                         textField.focus();
                         document.execCommand(isContentEditable ? "insertHTML" : "insertText", false, '<i>' + selectedText + '</i>');
                         hideTooltip();
                     });
 
                     /// Bold button
-                    addBasicTooltipButton(boldLabel, boldTextIcon, function() {
+                    let boldBtn = addBasicTooltipButton(boldLabel, boldTextIcon, function() {
                         textField.focus();
                         document.execCommand(isContentEditable ? "insertHTML" : "insertText", false, '<b>' + selectedText + '</b>');
                         hideTooltip();
                     });
 
                     /// Strikethrough button
-                    addBasicTooltipButton(strikeLabel, strikeTextIcon, function() {
+                    let strikeBtn = addBasicTooltipButton(strikeLabel, strikeTextIcon, function() {
                         textField.focus();
                         document.execCommand(isContentEditable ? "insertHTML" : "insertText", false, '<strike>' + selectedText + '</strike>');
                         hideTooltip();
                     });
+
+                    // /// Create text format button
+                    // const formatButton = document.createElement('button');
+                    // formatButton.setAttribute('class', configs.showButtonBorders ? 'selection-popup-button button-with-border' : 'selection-popup-button');
+                    // formatButton.classList.add('more-button');
+                    // formatButton.innerText = 'Text format';
+
+                    // /// Show as hover button
+                    // let collapsedPanel = createHoverPanelForButton(formatButton, undefined, undefined, false, true, true, false);
+                    // collapsedPanel.style.maxWidth = 'unset';
+                    // collapsedPanel.style.zIndex = '2';
+                    // collapsedPanel.classList.add('default-padding-tooltip');
+
+                    // collapsedPanel.appendChild(italicBtn);
+                    // collapsedPanel.appendChild(boldBtn);
+                    // collapsedPanel.appendChild(strikeBtn);
+
+                    // formatButton.appendChild(collapsedPanel);
+                    // tooltip.appendChild(formatButton);
                 }
 
                 if (configs.collapseButtons)

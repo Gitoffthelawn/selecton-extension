@@ -20,9 +20,6 @@ let handleLine, handleCircle;
 
 /// 0 for first (left) drag handle, 1 for second (right)
 function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
-    if (configs.debugMode)
-        console.log('Adding drag handle ' + dragHandleIndex.toString() + '...');
-
     if (selection == null || selection == undefined) return;
 
     const lineWidth = 2.25, circleHeight = 10, verticalOffsetCorrection = -1;
@@ -39,7 +36,7 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
 
     } catch (e) {
         if (configs.debugMode)
-            console.log('Selecton failed to compute font size of selected text');
+            console.log(e.toString());
     }
 
     try {
@@ -203,14 +200,12 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
 
                         } catch (e) {
                             if (configs.debugMode) {
-                                console.log('Error while creating selection range:');
                                 console.log(e);
                             }
                         }
                     }
                 } catch (e) {
                     if (configs.debugMode) {
-                        console.log('Error while moving the right drag handle:');
                         console.log(e);
                     }
                 }
@@ -251,9 +246,6 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
 
                     /// Single click to expand selection by one word
                     if (windowSelection.toString() == currentWindowSelection.toString()) {
-                        if (configs.debugMode)
-                            console.log('Single click on drag handle');
-
                         extendSelectionByWord(windowSelection, dragHandleIndex)
                     }
 
@@ -316,13 +308,9 @@ function addDragHandle(dragHandleIndex, selStartDimensions, selEndDimensions) {
         }
 
         document.body.appendChild(dragHandle);
-
-        if (configs.debugMode) {
-            console.log('Successfully added drag handle ' + dragHandleIndex.toString());
-        }
     } catch (e) {
         if (configs.debugMode) {
-            console.log('Failed to configure drag handle ' + dragHandleIndex.toString() + '. Error is: ' + e.toString());
+            console.log(e.toString());
         }
     }
 }
